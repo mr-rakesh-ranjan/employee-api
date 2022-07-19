@@ -25,4 +25,15 @@ public class EmployeeServiceImpl implements EmployeeService {
 		return employeeDao.findAll();	
 	}
 
+	@Override
+	public void deleteEmployee(long employeeId) {
+		Employee emp = this.employeeDao.findById(employeeId);
+		this.employeeDao.delete(emp);
+	}
+
+	@Override
+	public Employee findByEmployeeId(long employeeId) {
+		return this.employeeDao.findById(employeeId);
+	}
+
 }

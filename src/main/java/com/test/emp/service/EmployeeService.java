@@ -6,13 +6,13 @@ import com.test.emp.entity.Employee;
 
 public interface EmployeeService {
 
-	public Employee addEmployee(Employee employee);
+	Employee addEmployee(Employee employee);
 
-	public List<Employee> getAllEmployee();
+	List<Employee> getAllEmployee();
 
-	public void deleteEmployee(long employeeId);
+	void deleteEmployee(long employeeId);
 
-	public Employee findByEmployeeId(long employeeId);
+	Employee findByEmployeeId(long employeeId);
 	
 
 }

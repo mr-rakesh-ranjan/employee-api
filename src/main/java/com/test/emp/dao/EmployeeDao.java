@@ -11,11 +11,11 @@ import org.springframework.data.repository.query.Param;
 
 public interface EmployeeDao extends JpaRepository<Employee, Long> {
 
-    public void removeEmployeeByEmployeeId(long empId);
+    void removeEmployeeByEmployeeId(long empId);
     @Query("select u from Employee u where u.employeeId = :e")
-    public Employee findById(@Param("e") long employeeId);
+    Employee findById(@Param("e") long employeeId);
 
     @Query("select e from Employee e")
-    public Page<Employee> findAllEmployee(Pageable pePageable);
+    Page<Employee> findAllEmployee(Pageable pePageable);
 
 }
